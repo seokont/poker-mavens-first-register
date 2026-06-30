@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+/* iqpoker88 login page */
+.login-page {
+  background: radial-gradient(ellipse at 20% 0%, #0d4a2e 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, #1a3d2e 0%, transparent 50%),
+    linear-gradient(160deg, #061a12 0%, #0a2418 40%, #051510 100%);
+}
+
+.login-bg-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.login-bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.login-bg-glow-1 {
+  top: -10%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: rgba(212, 175, 55, 0.12);
+  animation: login-float 8s ease-in-out infinite;
+}
+
+.login-bg-glow-2 {
+  bottom: -10%;
+  right: -5%;
+  width: 350px;
+  height: 350px;
+  background: rgba(16, 185, 129, 0.1);
+  animation: login-float 10s ease-in-out infinite reverse;
+}
+
+@keyframes login-float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, -20px);
+  }
+}
+
+.login-card {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.login-logo-iq {
+  background: linear-gradient(135deg, #f5d76e 0%, #d4af37 50%, #b8962e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.login-logo-rest {
+  color: #ecfdf5;
+}
+
+.login-logo-num {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.login-input-wrap {
+  position: relative;
+}
+
+.login-input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  transform: translateY(-50%);
+  color: rgba(167, 243, 208, 0.4);
+  pointer-events: none;
+}
+
+.login-input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.75rem 1rem 0.75rem 2.75rem;
+  font-size: 0.9375rem;
+  color: #ecfdf5;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.login-input::placeholder {
+  color: rgba(167, 243, 208, 0.35);
+}
+
+.login-input:focus {
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+.login-submit {
+  background: linear-gradient(135deg, #d4af37 0%, #b8962e 50%, #9a7b1a 100%);
+  color: #061a12;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+}
+
+.login-submit:hover:not(:disabled) {
+  background: linear-gradient(135deg, #f5d76e 0%, #d4af37 50%, #b8962e 100%);
+  box-shadow: 0 6px 28px rgba(212, 175, 55, 0.45);
+  transform: translateY(-1px);
+}
+
+.login-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* admin dashboard */
+.admin-page {
+  overflow-x: hidden;
+}
+
+.admin-page .admin-bg-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.admin-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.admin-table th,
+.admin-table td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
